@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -13,16 +16,118 @@ body {
 .top-background {
   width: 100%;
   height: 200px;
-  background: #ff4b91;
+  background: #FF4486;
+  background: linear-gradient(90deg, rgba(255, 68, 134, 1) 0%, rgba(254, 96, 128, 1) 50%, rgba(253, 126, 121, 1) 100%);
   position: relative;
   overflow: hidden;
   border-radius: 0 0 50px 50px;
 }
 
+.bubble-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+
+.bubble {
+  position: absolute;
+  background: #ffa5c5;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* Bubble positions and sizes */
+.bubble-1 {
+  left: 7.5%;
+  top: 20%;
+  width: 60px;
+  height: 60px;
+  opacity: 0.4;
+}
+.bubble-2 {
+  left: 20%;
+  top: 35%;
+  width: 90px;
+  height: 90px;
+  opacity: 0.5;
+}
+.bubble-3 {
+  left: 37.5%;
+  top: 15%;
+  width: 120px;
+  height: 120px;
+  opacity: 0.4;
+}
+.bubble-4 {
+  left: 62.5%;
+  top: 25%;
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+}
+.bubble-5 {
+  left: 80%;
+  top: 40%;
+  width: 100px;
+  height: 100px;
+  opacity: 0.4;
+}
+.bubble-6 {
+  left: 95%;
+  top: 20%;
+  width: 70px;
+  height: 70px;
+  opacity: 0.5;
+}
+.bubble-7 {
+  left: 50%;
+  top: 60%;
+  width: 90px;
+  height: 90px;
+  opacity: 0.5;
+}
+.bubble-8 {
+  left: 25%;
+  top: 70%;
+  width: 80px;
+  height: 80px;
+  opacity: 0.4;
+}
+.bubble-9 {
+  left: 75%;
+  top: 80%;
+  width: 110px;
+  height: 110px;
+  opacity: 0.5;
+}
+.bubble-10 {
+  left: 12.5%;
+  top: 85%;
+  width: 70px;
+  height: 70px;
+  opacity: 0.4;
+}
+.bubble-11 {
+  left: 87.5%;
+  top: 65%;
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+}
+.bubble-12 {
+  left: 41.7%;
+  top: 90%;
+  width: 100px;
+  height: 100px;
+  opacity: 0.4;
+}
+
 .container {
   display: flex;
   justify-content: center;
-  margin-top: -50px;
+  margin-top: -30px;
   padding: 0 20px;
 }
 
@@ -30,28 +135,32 @@ body {
   position: relative;
   width: 500px;
   background: white;
-  border-radius: 20px;
+  border-radius: 50px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.08);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .card::before,
 .card::after {
   content: "";
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
-  top: 20px;
+  top: 25px;
 }
 
 .card::before {
-  left: 20px;
-  background: #ff4b91;
+  left: 30px;
+  background: #FF4486;
 }
 
 .card::after {
-  right: 20px;
-  background: #ff6ba2;
+  right: 30px;
+  background: #FD7E79;
 }
 
 .profile-content {
@@ -85,11 +194,9 @@ body {
 }
 
 .info h1 {
-  color: #ff4b91;
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
+  color: #6E6E6E;
+  font-weight: 600;
   margin-bottom: 5px;
-  font-weight: bold;
 }
 
 .location {
@@ -100,7 +207,7 @@ body {
 }
 
 .job-title {
-  color: #ff4b91;
+  color: #6E6E6E;
   font-size: 15px;
   margin-bottom: 20px;
   font-weight: 500;
@@ -122,7 +229,7 @@ body {
 .stat-number {
   font-size: 20px;
   font-weight: 500;
-  color: #ff4b91;
+  color: #6E6E6E;
 }
 
 .stat-label {
@@ -131,11 +238,64 @@ body {
   margin-top: 5px;
 }
 
-/* Responsive Design */
+/* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .top-background {
     height: 180px;
     border-radius: 0 0 40px 40px;
+  }
+
+  /* Hide some bubbles on tablet, keeping 7 bubbles */
+  .bubble-6,
+  .bubble-8,
+  .bubble-10,
+  .bubble-11,
+  .bubble-12 {
+    display: none;
+  }
+
+  /* Adjust remaining 7 bubbles with better spacing */
+  .bubble-1 {
+    left: 5%;
+    top: 15%;
+    width: 70px;
+    height: 70px;
+  }
+  .bubble-2 {
+    left: 20%;
+    top: 60%;
+    width: 80px;
+    height: 80px;
+  }
+  .bubble-3 {
+    left: 35%;
+    top: 25%;
+    width: 90px;
+    height: 90px;
+  }
+  .bubble-4 {
+    left: 50%;
+    top: 70%;
+    width: 75px;
+    height: 75px;
+  }
+  .bubble-5 {
+    left: 65%;
+    top: 20%;
+    width: 85px;
+    height: 85px;
+  }
+  .bubble-7 {
+    left: 80%;
+    top: 55%;
+    width: 70px;
+    height: 70px;
+  }
+  .bubble-9 {
+    left: 95%;
+    top: 30%;
+    width: 65px;
+    height: 65px;
   }
 
   .bubble-pattern {
@@ -160,6 +320,59 @@ body {
   .top-background {
     height: 160px;
     border-radius: 0 0 30px 30px;
+  }
+
+  /* Hide bubbles on mobile except for 5 selected ones */
+  .bubble-2,
+  .bubble-4,
+  .bubble-7,
+  .bubble-9,
+  .bubble-10,
+  .bubble-11,
+  .bubble-12 {
+    display: none;
+  }
+
+  /* Adjust remaining 5 bubbles with maximum spread */
+  .bubble-1 {
+    display: block;
+    left: -10%;
+    top: 20%;
+    width: 65px;
+    height: 65px;
+    opacity: 0.4;
+  }
+  .bubble-3 {
+    display: block;
+    left: 20%;
+    top: 40%;
+    width: 75px;
+    height: 75px;
+    opacity: 0.5;
+  }
+  .bubble-5 {
+    display: block;
+    left: 55%;
+    top: -25%;
+    width: 70px;
+    height: 70px;
+    opacity: 0.4;
+  }
+  .bubble-6 {
+    display: block;
+    left: 80%;
+    top: 60%;
+    width: 65px;
+    height: 65px;
+    opacity: 0.5;
+  }
+  .bubble-8 {
+    display: block;
+    left: 95%;
+    top: 20%;
+    width: 60px;
+    height: 60px;
+    opacity: 0.4;
   }
 
   .bubble-pattern {
@@ -211,16 +424,16 @@ body {
 
   .card::before,
   .card::after {
-    width: 10px;
-    height: 10px;
-    top: 15px;
+    width: 12px;
+    height: 12px;
+    top: 20px;
   }
 
   .card::before {
-    left: 15px;
+    left: 25px;
   }
 
   .card::after {
-    right: 15px;
+    right: 25px;
   }
 }
