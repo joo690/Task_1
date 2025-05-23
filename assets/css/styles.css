@@ -16,8 +16,13 @@ body {
 .top-background {
   width: 100%;
   height: 200px;
-  background: #FF4486;
-  background: linear-gradient(90deg, rgba(255, 68, 134, 1) 0%, rgba(254, 96, 128, 1) 50%, rgba(253, 126, 121, 1) 100%);
+  background: #ff4486;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 68, 134, 1) 0%,
+    rgba(254, 96, 128, 1) 50%,
+    rgba(253, 126, 121, 1) 100%
+  );
   position: relative;
   overflow: hidden;
   border-radius: 0 0 50px 50px;
@@ -155,12 +160,12 @@ body {
 
 .card::before {
   left: 30px;
-  background: #FF4486;
+  background: #ff4486;
 }
 
 .card::after {
   right: 30px;
-  background: #FD7E79;
+  background: #fd7e79;
 }
 
 .profile-content {
@@ -194,7 +199,7 @@ body {
 }
 
 .info h1 {
-  color: #6E6E6E;
+  color: #6e6e6e;
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -207,7 +212,7 @@ body {
 }
 
 .job-title {
-  color: #6E6E6E;
+  color: #6e6e6e;
   font-size: 15px;
   margin-bottom: 20px;
   font-weight: 500;
@@ -229,7 +234,7 @@ body {
 .stat-number {
   font-size: 20px;
   font-weight: 500;
-  color: #6E6E6E;
+  color: #6e6e6e;
 }
 
 .stat-label {
@@ -436,4 +441,21 @@ body {
   .card::after {
     right: 25px;
   }
+}
+
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ff6b81;
 }

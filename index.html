@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Card</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
@@ -37,9 +40,9 @@
             <img src="assets/images/profile_pic.jpg" alt="Profile Picture" />
           </div>
           <div class="info">
-            <h1>Joo Ayman</h1>
-            <p class="location">Cairo, Egypt</p>
-            <p class="job-title">Full Stack Developer & Cybersecurity</p>
+            <h1>Loading...</h1>
+            <p class="location">Loading...</p>
+            <p class="job-title">Loading...</p>
           </div>
           <div class="stats">
             <div class="stat-item">
@@ -55,8 +58,13 @@
               <span class="stat-label">Posts</span>
             </div>
           </div>
+          <button id="logoutBtn" class="logout-btn">Logout</button>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
